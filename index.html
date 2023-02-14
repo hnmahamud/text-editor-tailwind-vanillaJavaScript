@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <script src="https://kit.fontawesome.com/9070a33600.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="md:w-[70%] md:mx-auto">
+        <h1 class="text-3xl font-black text-gray-500 text-center my-8">Text Editor</h1>
+        <div class="w-full mb-4 border border-gray-300 rounded-lg bg-gray-50">
+            <div class="flex items-center justify-between px-3 py-2 border-b border-gray-300">
+                <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x">
+                    <div class="flex flex-wrap items-center space-x-1 sm:pr-4">
+                        <button id="boldBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            <i class="fa-solid fa-bold"></i>
+                        </button>
+
+                        <button id="italicBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            <i class="fa-solid fa-italic"></i>
+                        </button>
+
+                        <button id="underlineBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            <i class="fa-solid fa-underline"></i>
+                        </button>
+
+                        <button id="upperLowerBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            aA
+                        </button>
+                    </div>
+
+                    <div class="flex flex-wrap items-center space-x-1 sm:pl-4">
+                        <button id="leftAlignBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            <i class="fa-solid fa-align-left"></i>
+                        </button>
+
+                        <button id="centerAlignBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            <i class="fa-solid fa-align-center"></i>
+                        </button>
+
+                        <button id="rightAlignBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            <i class="fa-solid fa-align-right"></i>
+                        </button>
+
+                        <button id="justifyAlignBtn" type="button"
+                            class="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-200">
+                            <i class="fa-solid fa-align-justify"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center space-x-1 sm:pr-4">
+                    <input class="w-[40%] text-gray-500 border rounded sm:ml-auto" type="number" name="" id="fontSize"
+                        placeholder="Font Size" value="14">
+
+                    <input type="color" name="" id="color">
+                </div>
+            </div>
+            <div class="px-4 py-2 bg-white rounded-b-lg">
+                <textarea id="editor" rows="20"
+                    class="block w-full px-0 text-sm font-normal not-italic no-underline normal-case text-start text-gray-800 bg-white focus:outline-none"
+                    placeholder="Write here..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
