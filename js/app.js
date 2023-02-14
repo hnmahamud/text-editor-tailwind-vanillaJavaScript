@@ -1,6 +1,6 @@
 /* Click Bold Button */
-boldBtn.addEventListener('click', function() {
-    if(boldBtn.classList.contains('active')) {
+boldBtn.addEventListener('click', function () {
+    if (boldBtn.classList.contains('active')) {
         makeBold(false);
     }
     else {
@@ -10,8 +10,8 @@ boldBtn.addEventListener('click', function() {
 
 
 /* Click Italic Button */
-italicBtn.addEventListener('click', function() {
-    if(italicBtn.classList.contains('active')) {
+italicBtn.addEventListener('click', function () {
+    if (italicBtn.classList.contains('active')) {
         makeItalic(false);
     }
     else {
@@ -21,8 +21,8 @@ italicBtn.addEventListener('click', function() {
 
 
 /* Click Underline Button */
-underlineBtn.addEventListener('click', function() {
-    if(underlineBtn.classList.contains('active')) {
+underlineBtn.addEventListener('click', function () {
+    if (underlineBtn.classList.contains('active')) {
         makeUnderline(false);
     }
     else {
@@ -32,8 +32,8 @@ underlineBtn.addEventListener('click', function() {
 
 
 /* Click upperLower Button */
-upperLowerBtn.addEventListener('click', function() {
-    if(upperLowerBtn.classList.contains('active')) {
+upperLowerBtn.addEventListener('click', function () {
+    if (upperLowerBtn.classList.contains('active')) {
         makeUpperLower(false);
     }
     else {
@@ -43,36 +43,36 @@ upperLowerBtn.addEventListener('click', function() {
 
 
 /* Click leftAlign Button */
-leftAlignBtn.addEventListener('click', function() {
+leftAlignBtn.addEventListener('click', function () {
     makeLeftAlign();
 });
 
 
 /* Click centerAlign Button */
-centerAlignBtn.addEventListener('click', function() {
+centerAlignBtn.addEventListener('click', function () {
     makeCenterAlign();
 });
 
 
 /* Click rightAlign Button */
-rightAlignBtn.addEventListener('click', function() {
+rightAlignBtn.addEventListener('click', function () {
     makeRightAlign();
 });
 
 
 /* Click justifyAlign Button */
-justifyAlignBtn.addEventListener('click', function() {
+justifyAlignBtn.addEventListener('click', function () {
     makeJustifyAlign();
 });
 
 
 /* Input Font Size */
-fontSizeInput.addEventListener('input', function() {
+fontSizeInput.addEventListener('input', function () {
     setFontSize();
 });
 
 
 /* Input Text Color */
-colorInput.addEventListener('input', function() {
+colorInput.addEventListener('input', function () {
     setFontColor();
 });
