@@ -26,6 +26,14 @@ function unApplyChanges(removeClass, addClass, btn) {
 }
 
 
+/* For Changes Text Alignment */
+function applyAlignment (alignment, btn) {
+    editor.classList.add(alignment);
+    btn.classList.remove('text-gray-500');
+    btn.classList.add('bg-gray-200', 'text-gray-900');
+}
+
+
 /* Button and Editor Class Remover */
 function btnClassRemover(...args) {
     for (const arg of args) {
@@ -95,12 +103,8 @@ function makeUpperLower(bool) {
 function makeLeftAlign() {
     // Editor class remove for make Left Align unique.
     editorClassRemover('text-start', 'text-center', 'text-right', 'text-justify');
-
     // Style for Left Align
-    editor.classList.add('text-left');
-    leftAlignBtn.classList.remove('text-gray-500');
-    leftAlignBtn.classList.add('bg-gray-200', 'text-gray-900');
-
+    applyAlignment('text-left', leftAlignBtn);
     // Buttons class remove for make Left Align unique.
     btnClassRemover(centerAlignBtn, rightAlignBtn, justifyAlignBtn);
 }
@@ -110,12 +114,8 @@ function makeLeftAlign() {
 function makeCenterAlign() {
     // Editor class remove for make Center Align unique.
     editorClassRemover('text-start', 'text-left', 'text-right', 'text-justify');
-
     // Style for Center Align
-    editor.classList.add('text-center');
-    centerAlignBtn.classList.remove('text-gray-500');
-    centerAlignBtn.classList.add('bg-gray-200', 'text-gray-900');
-
+    applyAlignment('text-center', centerAlignBtn);
     // Buttons class remove for make Center Align unique.
     btnClassRemover(leftAlignBtn, rightAlignBtn, justifyAlignBtn);
 }
@@ -125,12 +125,8 @@ function makeCenterAlign() {
 function makeRightAlign() {
     // Editor class remove for make Right Align unique.
     editorClassRemover('text-start', 'text-left', 'text-center', 'text-justify');
-
     // Style for Right Align
-    editor.classList.add('text-right');
-    rightAlignBtn.classList.remove('text-gray-500');
-    rightAlignBtn.classList.add('bg-gray-200', 'text-gray-900');
-
+    applyAlignment('text-right', rightAlignBtn);
     // Buttons class remove for make Right Align unique.
     btnClassRemover(leftAlignBtn, centerAlignBtn, justifyAlignBtn);
 }
@@ -140,12 +136,8 @@ function makeRightAlign() {
 function makeJustifyAlign() {
     // Editor class remove for make Justify Align unique.
     editorClassRemover('text-start', 'text-left', 'text-right', 'text-center');
-
     // Style for Justify Align
-    editor.classList.add('text-justify');
-    justifyAlignBtn.classList.remove('text-gray-500');
-    justifyAlignBtn.classList.add('bg-gray-200', 'text-gray-900');
-
+    applyAlignment('text-justify', justifyAlignBtn);
     // Buttons class remove for make Justify Align unique.
     btnClassRemover(leftAlignBtn, centerAlignBtn, rightAlignBtn);
 }
